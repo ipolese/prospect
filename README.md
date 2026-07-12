@@ -96,6 +96,32 @@ Cada diretório dentro de `skills/` contém um `SKILL.md`. Algumas skills també
 
 ## Instalação no Codex
 
+### Instalação rápida pelo terminal
+
+Clone o repositório e registre o marketplace:
+
+```bash
+git clone https://github.com/ipolese/prospect.git
+cd prospect
+codex plugin marketplace add ipolese/prospect
+codex plugin marketplace upgrade igorpolese-plugins
+codex
+```
+
+No Codex, o plugin aparece como `prospector-de-sites-codex`. A versão atual do
+CLI pode não ter um comando `plugin add`; nesse caso, o marketplace é
+atualizado pelo terminal e o plugin é habilitado pelo gerenciador de plugins do
+Codex Desktop. O aplicativo ChatGPT e sua tela de Plugins não são o instalador
+deste plugin de skills.
+
+Para atualizar uma instalação existente:
+
+```bash
+cd /caminho/para/prospect
+git pull --ff-only
+codex plugin marketplace upgrade igorpolese-plugins
+```
+
 O diretório precisa ser instalado ou disponibilizado como plugin local do Codex. O manifesto principal está em:
 
 ```text
@@ -110,6 +136,27 @@ Depois de instalar ou habilitar o plugin, inicie uma nova tarefa no Codex para g
 - `$publicar`
 
 O nome técnico do plugin é `prospector-de-sites-codex` e a versão atual é `1.0.0`.
+
+### Executar o dashboard local
+
+Depois do `$setup`, abra uma segunda aba do terminal na pasta de trabalho e
+inicie o servidor administrativo:
+
+```bash
+cd /Users/ipolese/Documents/Projetos/prospector
+python3 dashboard-server.py --host 127.0.0.1 --port 8765
+```
+
+Abra [http://127.0.0.1:8765](http://127.0.0.1:8765). Para o preview dos sites,
+use outro terminal:
+
+```bash
+cd /Users/ipolese/Documents/Projetos/prospector
+python3 servidor-sites.py --host 127.0.0.1 --port 8766
+```
+
+O dashboard roda na porta `8765`; os sites publicados localmente rodam na
+porta `8766`. Pare cada servidor com `Ctrl+C`.
 
 ## Configuração inicial
 
