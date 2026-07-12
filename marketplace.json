@@ -1,0 +1,20 @@
+{
+  "name": "igorpolese-plugins",
+  "interface": {
+    "displayName": "Igor Polese — Plugins"
+  },
+  "plugins": [
+    {
+      "name": "prospector-de-sites-codex",
+      "source": {
+        "source": "local",
+        "path": "./"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+prospector-config.json
+prospector.db
+.google-oauth.json
+tasks.json
+backups/
+*.log
+__pycache__/
+*.pyc
+sites/*/contrato-*
+sites/*/antigo.*
+fila-publicacao*.txt
