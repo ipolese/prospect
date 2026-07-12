@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "assinatura": {"type":"object","properties":{"nome":{"type":"string","maxLength":160},"apresentacao":{"type":"string","maxLength":240},"whatsapp":{"type":"string","pattern":"^[0-9]{10,15}$"}},"additionalProperties":false},
+    "prospeccao": {"type":"object","properties":{"nichos":{"type":"array","items":{"type":"string","maxLength":100},"minItems":1},"cidade":{"type":"string","maxLength":160},"leadsPorBusca":{"type":"integer","minimum":1,"maximum":100}},"additionalProperties":false},
+    "envio": {"type":"object","properties":{"modo":{"enum":["rascunho","enviar"]}},"additionalProperties":false},
+    "publicacao": {"type":"object","properties":{"provedor":{"enum":["localhost","sftp"]},"host":{"type":"string","maxLength":255},"porta":{"type":"integer","minimum":1024,"maximum":65535}},"additionalProperties":false}
+  },
+  "additionalProperties": false
+}
