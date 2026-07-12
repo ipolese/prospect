@@ -39,6 +39,20 @@ O Prospector conduz o seguinte ciclo:
 - Uma pasta de trabalho com permissão de leitura e escrita.
 - Navegador integrado para a prospecção e captura de conteúdo.
 
+## Instalação pelo marketplace do GitHub
+
+O repositório já usa o layout de marketplace do Codex. No terminal, registre o
+marketplace uma única vez:
+
+```bash
+codex plugin marketplace add ipolese/prospect
+```
+
+Depois, abra o gerenciador de plugins do Codex, selecione o marketplace
+`igorpolese-plugins` e instale `prospector-de-sites-codex`. O pacote do plugin
+fica exclusivamente em `plugins/prospector-de-sites-codex`; não há uma segunda
+cópia dos arquivos na raiz do repositório.
+
 ### Opcionais
 
 - Conector Gmail para criar rascunhos e consultar respostas.
